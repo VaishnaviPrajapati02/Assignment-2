@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V Mart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .product {
+            background-color: white;
+            margin: 10px;
+            padding: 20px;
+            width: 250px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .product p {
+            font-size: 1rem;
+            color: #777;
+        }
+        .product .price {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: bold;
+        }
+        .product button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .product button:hover {
+            background-color: #218838;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>V Mart</h1>
+    <p>Welcome to the best V Mart for amazing products!</p>
+</header>
+<div class="container">
+    <div class="product">
+        <img src="C:\Users\vaish\Downloads\Shampoo.jpg" alt="Shampoo">
+        <h3>Head and Shoulders Shampoo</h3>
+        <p>Brand: Head and Shoulders <br> Head and Shoulders, Anti Dandruff Shampoo,Lemon Fresh,180ML </p>
+        <div class="Product Name"> Shampoo</div>
+        <div class="Product id">VA73VI</div>
+        <div class=" Product Price">$4.23</div>
+        <button class="cart-button" onclick="addToCart('Shampoo', 4)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="C:\Users\vaish\Downloads\dettol.jpg" alt="Soap">
+        <h3>Soap</h3>
+        <p>Brand: Dettol <br> Dettol Original Germ Protection Bathing Soap Bar (400gm) | Kills 99.99% germs, 100g - Pack of 4</p>
+        <div class="Product Name">Soap</div>
+        <div class="Product id">UF46KL</div>
+        <div class="Product Price">$1.83</div>
+        <button class="cart-button" onclick="addToCart('Soap',1)">Add to Cart</button>
+    </div>
+    <div class="product">
+            <img src="C:\Users\vaish\Downloads\bajaj almonds oil.jpg" alt="Hair Oil">
+        <h3>Hair Oil</h3>
+        <p>Brand: Bajaj <br>Bajaj Almond Drops Hair Oil, 625ml, Hair Oil, 6X Vitamin E, Almond Oil, Light and Non-Sticky, Hair Fall Control</p>
+        <div class="Product Name"> Hair Oil</div>
+        <div class="Product id">RM18JM</div>
+        <div class="Product Price">$4.23</div>
+        <button class="cart-button" onclick="addToCart('Hair Oil', 4)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="C:\Users\vaish\Downloads\Laptop.jpg" alt="Laptop">
+        <h3>Laptop</h3>
+        <p>Brand: Microsoft <br> Surface Laptop GO 3 Touch Screen 12.4" Inch, i5 /12th Gen Intel Core i5 1235U /8GB RAM /256GB SSD/Windows 11 /English Hdwr Platinum - XK1-00045</p>
+        <div class="Product Name">Laptop</div>
+        <div class="Product id">JK72TE</div>
+        <div class="Product Price">$743.65</div>
+        <button class="cart-button" onclick="addToCart('Laptop', 743)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="C:\Users\vaish\Downloads\iphone.jpg" alt="Mobile">
+        <h3>Mobile</h3>
+        <p>iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Ultramarine</p>
+        <div class="Product Name">Moblie</div>
+        <div class="Product id">BH63JH</div>
+        <div class="Product Price">$913.96</div>
+        <button class="cart-button" onclick="addToCart('Mobile',913)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="C:\Users\vaish\Downloads\perfume.jpg" alt="Perfume">
+        <h3>Perfume</h3>
+        <p>Scentice Red Eau De Parfum, Premium Perfume for Men, Long Lasting Smell, Aqua Floral Fragrance Scent - (100 ml)</p>
+        <div class="Product Name">Perfume</div>
+        <div class="Product id">LN38CA</div>
+        <div class="Prooduct Price">$9.03</div>
+        <button class="cart-button" onclick="addToCart('Perfume',9)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\vaish\Downloads\earrings.jpg" alt="Earrings">
+            <h3>Earrings</h3>
+            <p>HIGHSPARK 925 Silver Long Tassle Drop Pearl Earrings for Women | 92.5 Sterling Silver & Brilliant Lustre Pearls | Lovely Gift - Tassle Drop Pearl</p>
+            <div class="Product Name">Earrings</div>
+            <div class="Product id">DK65SJ</div>
+            <div class="Product Price">$9.12</div>
+            <button class="cart-button" onclick="addToCart('Earrings', 9)"> </button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\vaish\Downloads\Bracelets.jpg" alt="Bracelets">
+            <h3>Bracelets</h3>
+            <p>Brand: Okos <br> Okos Rose Gold Plated Pink Flowers Link Chain Adjustable Size Charm Alloy Bracelet Decorated With Crystals for Girls & Women BROK1000009</p>
+            <div class="Product Name">Bracelets</div>
+            <div class="Product id">VK45JD</div>
+            <div class="Product Price">$13.72</div>
+            <button class="cart-button" onclick="addToCart('Bracelet',13)">Add to Cart</button>
+        </div>
+</div>
+<button class="add-to-cart" data-product-id="123" data-product-name="Product Name" data-product-price="19.99">Add to Cart</button>
+</div>
+<!-- Cart Section (shown somewhere on the page) -->
+<div class="cart">
+    <p>Items in Cart: <span id="cart-count">0</span></p>
+    <button id="view-cart">View Cart</button>
+</div>
+<footer>
+    <p>&copy; Thank you for Shopping and Visit Again </p>
+</footer>
+</body>
+</html>
