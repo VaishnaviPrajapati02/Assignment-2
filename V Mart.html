@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V Mart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .product {
+            background-color: white;
+            margin: 10px;
+            padding: 20px;
+            width: 250px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .product p {
+            font-size: 1rem;
+            color: #777;
+        }
+        .product .price {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: bold;
+        }
+        .product button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .product button:hover {
+            background-color: #218838;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>V Mart</h1>
+    <p>Welcome to the best V Mart for amazing products!</p>
+</header>
+<div class="container">
+    <div class="product">
+        <img src="C:\Users\vaish\Downloads\Shampoo.jpg" alt="Shampoo">
+        <h3>Head and Shoulders Shampoo</h3>
+        <p>Brand: Head and Shoulders <br> Head and Shoulders, Anti Dandruff Shampoo,Lemon Fresh,180ML </p>
+        <div class="Product Name"> Shampoo</div>
+        <div class="Product id">VA73VI</div>
+        <div class=" Product Price">$4.23</div>
+        <button class="cart-button" onclick="addToCart('Shampoo', 4)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="C:\Users\vaish\Downloads\dettol.jpg" alt="Soap">
+        <h3>Soap</h3>
+        <p>Brand: Dettol <br> Dettol Original Germ Protection Bathing Soap Bar (400gm) | Kills 99.99% germs, 100g - Pack of 4</p>
+        <div class="Product Name">Soap</div>
+        <div class="Product id">UF46KL</div>
+        <div class="Product Price">$1.83</div>
+        <button class="cart-button" onclick="addToCart('Soap',1)">Add to Cart</button>
+    </div>
+    <div class="product">
+            <img src="C:\Users\vaish\Downloads\bajaj almonds oil.jpg" alt="Hair Oil">
+        <h3>Hair Oil</h3>
+        <p>Brand: Bajaj <br>Bajaj Almond Drops Hair Oil, 625ml, Hair Oil, 6X Vitamin E, Almond Oil, Light and Non-Sticky, Hair Fall Control</p>
+        <div class="Product Name"> Hair Oil</div>
+        <div class="Product id">RM18JM</div>
+        <div class="Product Price">$4.23</div>
+        <button class="cart-button" onclick="addToCart('Hair Oil', 4)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="C:\Users\vaish\Downloads\Laptop.jpg" alt="Laptop">
+        <h3>Laptop</h3>
+        <p>Brand: Microsoft <br> Surface Laptop GO 3 Touch Screen 12.4" Inch, i5 /12th Gen Intel Core i5 1235U /8GB RAM /256GB SSD/Windows 11 /English Hdwr Platinum - XK1-00045</p>
+        <div class="Product Name">Laptop</div>
+        <div class="Product id">JK72TE</div>
+        <div class="Product Price">$743.65</div>
+        <button class="cart-button" onclick="addToCart('Laptop', 743)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="C:\Users\vaish\Downloads\iphone.jpg" alt="Mobile">
+        <h3>Mobile</h3>
+        <p>iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Ultramarine</p>
+        <div class="Product Name">Moblie</div>
+        <div class="Product id">BH63JH</div>
+        <div class="Product Price">$913.96</div>
+        <button class="cart-button" onclick="addToCart('Mobile',913)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="C:\Users\vaish\Downloads\perfume.jpg" alt="Perfume">
+        <h3>Perfume</h3>
+        <p>Scentice Red Eau De Parfum, Premium Perfume for Men, Long Lasting Smell, Aqua Floral Fragrance Scent - (100 ml)</p>
+        <div class="Product Name">Perfume</div>
+        <div class="Product id">LN38CA</div>
+        <div class="Prooduct Price">$9.03</div>
+        <button class="cart-button" onclick="addToCart('Perfume',9)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\vaish\Downloads\earrings.jpg" alt="Earrings">
+            <h3>Earrings</h3>
+            <p>HIGHSPARK 925 Silver Long Tassle Drop Pearl Earrings for Women | 92.5 Sterling Silver & Brilliant Lustre Pearls | Lovely Gift - Tassle Drop Pearl</p>
+            <div class="Product Name">Earrings</div>
+            <div class="Product id">DK65SJ</div>
+            <div class="Product Price">$9.12</div>
+            <button class="cart-button" onclick="addToCart('Earrings, 9)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\vaish\Downloads\Bracelets.jpg" alt="Bracelets">
+            <h3>Bracelets</h3>
+            <p>Brand: Okos <br> Okos Rose Gold Plated Pink Flowers Link Chain Adjustable Size Charm Alloy Bracelet Decorated With Crystals for Girls & Women BROK1000009</p>
+            <div class="Product Name">Bracelets</div>
+            <div class="Product id">VK45JD</div>
+            <div class="Product Price">$13.72</div>
+            <button class="cart-button" onclick="addToCart('Bracelet',13)">Add to Cart</button>
+        </div>
+</div>
+<button class="add-to-cart" data-product-id="123" data-product-name="Product Name" data-product-price="19.99">Add to Cart</button>
+</div>
+<!-- Cart Section (shown somewhere on the page) -->
+<div class="cart">
+    <p>Items in Cart: <span id="cart-count">0</span></p>
+    <button id="view-cart">View Cart</button>
+</div>
+<footer>
+    <p>&copy; Thank you for Shopping and Visit Again </p>
+</footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Categories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .category-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .category-item {
+            width: 30%;
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .category-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .category-item p {
+            font-size: 16px;
+            color: #777;
+        }
+        .category-item a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        .category-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Our Product Categories</h1>
+    <div class="category-list">
+        <div class="category-item">
+            <h3>Electronics</h3>
+            <p>Find the latest electronics including smartphones, laptops, and gadgets.</p>
+            <a href="#">Shop Now</a>
+        </div>
+        <div class="category-item">
+            <h3>Clothing</h3>
+            <p>Explore our range of fashion clothing for men, women, and children.</p>
+            <a href="#">Shop Now</a>
+        </div>
+        <div class="category-item">
+            <h3>Home & Kitchen</h3>
+            <p>Discover everything you need for your home, from furniture to appliances.</p>
+            <a href="#">Shop Now</a>
+        </div>
+        <div class="category-item">
+            <h3>Beauty</h3>
+            <p>Browse beauty products from skincare to makeup essentials.</p>
+            <a href="#">Shop Now</a>
+        </div>
+        <div class="category-item">
+            <h3>Sports</h3>
+            <p>Shop sports equipment, clothing, and accessories for all athletes.</p>
+            <a href="#">Shop Now</a>
+        </div>
+        <div class="category-item">
+            <h3>Toys</h3>
+            <p>Find toys for all ages, from educational toys to action figures.</p>
+            <a href="#">Shop Now</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - V Mart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .checkout-section {
+            display: flex;
+            justify-content: space-between;
+        }
+        .checkout-section .form-section {
+            width: 65%;
+        }
+        .checkout-section .summary-section {
+            width: 30%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .summary-table td, .summary-table th {
+            padding: 10px;
+            text-align: left;
+        }
+        .summary-table th {
+            background-color: #f2f2f2;
+        }
+        .summary-table .total {
+            font-weight: bold;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Checkout</h1>
+    <div class="checkout-section">
+        <!-- Checkout Form Section -->
+        <div class="form-section">
+            <h2>Billing Information</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Street Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+                <div class="form-group">
+                    <label for="zip">Zip Code</label>
+                    <input type="number" id="zip" name="zip" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="us">United States</option>
+                        <option value="ca">India</option>
+                        <option value="uk">South Korea</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                </div>
+            </form>
+        </div>
+        <!-- Order Summary Section -->
+        <div class="summary-section">
+            <h2>Order Summary</h2>
+            <table class="summary-table">
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Head and Shoulders Shampoo</td>
+                    <td>$4.23</td>
+                </tr>
+                <tr>
+                    <td>Perfume</td>
+                    <td>$9.03</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>$5.00</td>
+                </tr>
+                <tr class="total">
+                    <td>Total</td>
+                    <td>$18.26</td>
+                </tr>
+            </table>
+            <button class="btn" type="submit">Complete Purchase</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
